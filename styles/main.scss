@@ -1,17 +1,74 @@
-@import './normalize.css';
-@import './_vars.scss';
-@import './fonts.scss';
-@import './media.scss';
-@import './base.scss';
-@import './components/menu.scss';
-@import './components/header.scss';
-@import './components/phone-link.scss';
-@import './components/promo.scss';
-@import './components/main.scss';
-@import './components/card.scss';
-@import './components/burger-menu.scss';
-@import './components/form-link.scss';
+@import "./normalize.css";
+@import "./_vars.scss";
+@import "./base.scss";
+@import "./components/menu.scss";
+@import "./components/header.scss";
+@import "./components/promo.scss";
+@import "./components/main.scss";
+@import "./components/card.scss";
+@import "./components/benefits.scss";
+@import "./components/gallery.scss";
+@import "./components/accordions.scss";
+
+
 body {
-  background-color: $black-color;
-  min-width: 320px;
+  position: relative;
+  background-color: $backgrond-color;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: 1366px;
+  max-width: 1366px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip__btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.tooltip__txt {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 999;
+  padding: 16px;
+  width: max-content;
+  max-width: 191px;
+  font-size: 14px;
+  color: $white-color;
+  text-align: center;
+  background: $theme-dark;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 8px solid $theme-dark;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    height: 0;
+    width: 0;
+  }
+}
+
+.tooltip__btn:hover + .tooltip__txt,
+.tooltip__btn:focus + .tooltip__txt {
+  opacity: 1;
+  visibility: visible;
 }

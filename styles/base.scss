@@ -1,5 +1,4 @@
 @import 'vars.scss';
-@import 'media.scss';
 
 * {
   margin: 0;
@@ -10,8 +9,8 @@
 html,
 body {
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background: $black-color;
+  font-family: 'Open Sans', sans-serif;
+  background: $backgrond-color;
 }
 
 .wrapper {
@@ -22,23 +21,12 @@ body {
 }
 
 .container {
-  max-width: 1760px;
+  max-width: 1120px;
   text-align: center;
   margin: auto;
   width: 100%;
   padding: 0 20px;
 
-  @include tablet-lg {
-    padding: 0 48px;
-  }
-
-  @include mobile-sm {
-    padding: 0 15px;
-  }
-
-  &--s {
-    max-width: 616px;
-  }
 }
 
 .content {
@@ -50,19 +38,3 @@ ul {
   list-style-type: none;
 }
 
-.main-title {
-  font: normal 700 42px / 1 'Montserrat', sans-serif;
-  color: $white-color;
-  text-transform: uppercase;
-  line-height: 51px;
-
-  @include tablet-lg {
-    font-size: 38px;
-    line-height: 46px;
-  }
-
-  @include mobile {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}

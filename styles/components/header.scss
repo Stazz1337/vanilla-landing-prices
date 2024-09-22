@@ -1,67 +1,37 @@
-@import '../vars.scss';
-@import '../media.scss';
+@import "../vars.scss";
 
 .header {
+  position: absolute;
+  z-index: 1;
   width: 100%;
-  padding: 28px 0;
+  padding: 12px 0;
   color: $white-color;
 
-  @include mobile {
-    padding: 20px 0;
+  &__input-wrapper {
+    width: 391px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10.5px 16px;
+    border: 1px solid $white-color;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06) inset;
+  }
+
+  &__input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $white-color;
+    &::placeholder {
+      color: $white-color;
+    }
   }
   &__wrapper {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 76px;
-    @include mobile {
-      justify-content: space-between;
-      gap: 0;
-    }
-  }
-
-  &__contacts {
-    display: flex;
-    gap: 28px;
-    margin: 0 0 0 auto;
-    padding: 0 20px 0 0;
-
-    @include mobile {
-      display: none;
-    }
-    &.mobile {
-      width: 95%;
-      display: flex;
-      position: absolute;
-      bottom: 20px;
-      z-index: 10;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 20px;
-      gap: 6px;
-
-      .phone-link::after {
-        left: 45%;
-      }
-
-      .form-link {
-        max-width: 100%;
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
-
-  &__link {
-    @include mobile {
-      margin-left: auto;
-    }
-  }
-
-  &__logo {
-    @include mobile {
-      max-width: 112px;
-    }
+    justify-content: space-between;
   }
 }

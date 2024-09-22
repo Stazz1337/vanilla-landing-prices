@@ -7,80 +7,576 @@
     <link rel="stylesheet" href="./styles/main.scss" />
   </head>
   <body>
-    <section class="main">
-      <header class="header">
-        <div class="container">
-          <div class="header__wrapper">
-            <div class="burger">
-              <div class="burger__item"></div>
-              <div class="burger__item"></div>
-              <div class="burger__item"></div>
-            </div>
-            <a class="header__link" href="#">
-              <img class="header__logo" src="/images/svg/logo.svg" alt="Логотип" />
-            </a>
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link">Услуги</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Абонементы</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Почему мы</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Оборудование</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Акции</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">FAQ</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="header__contacts">
-              <a class="phone-link" href="#"></a>
-              <button class="form-link request">
-                <span class="form-link__title">Оставить заявку</span>
-              </button>
-            </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__input-wrapper">
+            <img
+              class="header__search-icon"
+              src="./images/svg/search.svg"
+              alt="search"
+              width="16"
+              height="16" />
+            <input
+              class="header__input"
+              type="text"
+              placeholder="Search for courses, lessons, resources..." />
           </div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link">All Courses</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link">For Business</a>
+              </li>
+              <li><div class="menu__divider"></div></li>
+              <li class="menu__item">
+                <a class="menu__link">Log In</a>
+              </li>
+              <li class="menu__item">
+                <button type="button" class="menu__button">Get Started</button>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </header>
-      <section class="promo">
-        <div class="container">
-          <div class="promo__wrapper">
-            <div class="promo__info">
-              <h1 class="main-title promo__title">
-                Полет Илона Маска <br />
-                и&nbsp;Dodge coin
-              </h1>
-              <p class="promo__desc">
-                В прошлый четверг все офигели от полета DOGIE COIN&nbsp;на&nbsp;марс.
-              </p>
-              <button type="button" class="form-link">
-                <span class="form-link__title">Оставить заявку</span>
+      </div>
+    </header>
+
+    <section class="promo">
+      <h1 class="promo__title">Pricing Plans</h1>
+      <p class="promo__desc">
+        Upgrade your skills. Choose a plan that works for your budget and career goals.
+      </p>
+    </section>
+
+    <section class="main">
+      <section class="cards">
+        <article class="cards__container">
+          <div class="cards__header">
+            <p class="cards__title">Most popular!</p>
+          </div>
+
+          <div class="cards__wrapper">
+            <div class="cards__subtitle-wrapper">
+              <p>All Access Membership</p>
+              <h3>Basic</h3>
+            </div>
+            <p>Includes all courses from many programs</p>
+            <h4>Pick your plan:</h4>
+            <form class="cards__form">
+              <div class="cards__radiogroup">
+                <input class="cards__radio-input" type="radio" id="radio1" name="radio" checked />
+                <label class="cards__radio-label" for="radio1">
+                  <span>$47</span>
+                  <span>/month</span>
+                  <span>(pay annually — $564 / year)</span>
+                  <span>Save 30%!</span>
+                </label>
+              </div>
+              <div class="cards__radiogroup">
+                <input class="radio-input" type="radio" id="radio2" name="radio" />
+                <label class="cards__radio-label" for="radio2">
+                  <span>$87</span>
+                  <span>/month</span>
+                  <span>(pay per month)</span>
+                </label>
+              </div>
+
+              <button type="submit" class="cards__btn">
+                <span class="cards__btn-text">Enroll Now</span>
               </button>
+            </form>
+            <p>Includes:</p>
+            <ul class="cards__list">
+              <li class="cards__item">
+                <p>All 100+ Courses</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </li>
+              <li class="cards__item">
+                <p>All 4 Certificate Programs</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </li>
+              <li class="cards__item">
+                <p>Excel, PPT, and PDF Files</p>
+              </li>
+              <li class="cards__item">
+                <p>Digital Blockchain Verified Certificates</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="cards__container _secondary">
+          <div class="cards__header">
+            <p class="cards__title">Most benefits!</p>
+          </div>
+
+          <div class="cards__wrapper">
+            <div class="cards__subtitle-wrapper">
+              <p>All Access Membership</p>
+              <h3>Full-Immersion</h3>
+            </div>
+            <p>Everything in the Basic plan, plus more</p>
+            <form class="cards__form">
+              <label class="cards__radio-label">
+                <span>$77</span>
+                <span>/month</span>
+                <span>(pay annually — $924 / year)</span>
+              </label>
+              <button type="submit" class="cards__btn">
+                <span class="cards__btn-text">Enroll Now</span>
+              </button>
+            </form>
+            <p>Everything in Basic, plus:</p>
+            <ul class="cards__list">
+              <li class="cards__item">
+                <p>Capital IQ & EIKON Partner Integrations</p>
+              </li>
+              <li class="cards__item">
+                <p>Premium Email Support</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </li>
+              <li class="cards__item">
+                <p>Model Review & Feedback</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </li>
+              <li class="cards__item">
+                <p>Additional Case Studies</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </li>
+
+              <li class="cards__item">
+                <p>Resume & Cover Letter Review</p>
+              </li>
+              <li class="cards__item">
+                <p>A FREE Modeling Competition Entry</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="benefits">
+        <table class="benefits__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <p>All-Access Membership</p>
+                <p class="h4">Basic</p>
+                <p>$564 / year</p>
+              </th>
+              <th>
+                <p>All-Access Membership</p>
+                <p class="h4">Full-Immersion</p>
+                <p>$924 / year</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>All 100+ Courses</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>All Certificate Programs</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>Quizzes, Assignments, and Tests</td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>Excel, PPT, and PDF Files</td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>Digital Blockchain Verified Certificate</td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>Another Shared Benefit</td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>Another Shared Benefit</td>
+              <td class="check"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>Another Shared Benefit</td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>Exclusive Partner Integrations</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>Premium Email Support</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>Model Review & Feedback</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>Additional Case Studies</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>Résumé & Cover Letter Review</p>
+                <span class="tooltip">
+                  <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                    <img src="./images/svg/tooltip.svg" alt="tooltip" width="16" height="16" />
+                  </button>
+
+                  <span class="tooltip__txt" role="tooltip" id="warn-tooltip">
+                    Default tooltip. Here you’ll find something on the left.</span
+                  >
+                </span>
+              </td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p>One FREE Financial Modeling Competition Entry</p>
+              </td>
+              <td class="cross"></td>
+              <td class="check-2"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <h4>Basic</h4>
+                <p>$564 / year</p>
+                <button type="button"><span>Enroll Now</span></button>
+              </td>
+              <td>
+                <h4>Full-Immersion</h4>
+                <p>$847 / year</p>
+                <button type="button" class="secondary"><span>Enroll Now</span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="acor">
+        <div class="acor__wrapper">
+          <h2 class="acor__title">Frequently Asked Questions</h2>
+
+          <div class="acor__container">
+            <input type="checkbox" name="chacor" id="chacor1" />
+            <label for="chacor1"
+              >Can I download the Excel files and financial modeling templates?</label
+            >
+            <div class="acor__body">
+              <p>Can I download the Excel files and financial modeling templates?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor2" />
+            <label for="chacor2">How long do I have to complete the course?</label>
+            <div class="acor__body">
+              <p>How long do I have to complete the course?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor3" />
+            <label for="chacor3">Are courses verified?</label>
+            <div class="acor__body">
+              <p>Are courses verified?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor4" />
+            <label for="chacor4">Are there additional fees or costs? </label>
+            <div class="acor__body">
+              <p>Are there additional fees or costs?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor5" />
+            <label for="chacor5">What currency are your courses priced in?</label>
+            <div class="acor__body">
+              <p>What currency are your courses priced in?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor6" />
+            <label for="chacor6">How do I earn my certificates?</label>
+            <div class="acor__body">
+              <p>How do I earn my certificates?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor7" />
+            <label for="chacor7">Can I email the instructor if I have questions?</label>
+            <div class="acor__body">
+              <p>Can I email the instructor if I have questions?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor8" />
+            <label for="chacor8">Wil these courses help me advanced my career?</label>
+            <div class="acor__body">
+              <p>Wil these courses help me advanced my career?</p>
+            </div>
+
+            <input type="checkbox" name="chacor" id="chacor9" />
+            <label for="chacor9">More questions?</label>
+            <div class="acor__body">
+              <p>More questions?</p>
             </div>
           </div>
         </div>
       </section>
+      <section class="gallery">
+        <h2 class="gallery__title">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros
+          aliquam mattis
+        </h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amet, consectetur gdfg gdfgdfgdfg gdfgdfgfdg adipiscing
+                  elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor
+                  nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget
+                  eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim
+                  feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget
+                  eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim
+                  feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amethfghfghfghfghfg hfghfghfghf, consectetur adipiscing
+                  elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor
+                  nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget
+                  eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim
+                  feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget
+                  eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim
+                  feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="gallery__card">
+                <div class="gallery__card-header">
+                  <img class="gallery__img" src="./images/bill.jpg" alt="photo" />
+                  <div class="gallery__card-header-text">
+                    <p class="gallery__name">John Doe</p>
+                    <p class="gallery__job">Financial Controller</p>
+                  </div>
+                </div>
+                <p class="gallery__text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget
+                  eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim
+                  feugiat dapibus et non justo ...”
+                </p>
+                <button type="button" class="gallery__btn"><span>Read more</span></button>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
     </section>
-    <section class="cards">
-      <div class="container">
-        <h2 class="cards__title">Карточки</h2>
-        <div class="cards__wrapper"></div>
-        <button class="form-link cards__btn">
-          <span class="form-link__title">Загрузить еще</span>
-        </button>
-      </div>
-    </section>
+
     <script type="module" src="./script.js"></script>
   </body>
 </html>

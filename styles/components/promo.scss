@@ -1,59 +1,28 @@
-@import '../vars.scss';
-@import '../media.scss';
+@import "../vars.scss";
 
 .promo {
-  width: 100%;
-  height: 100%;
-
-  background: url('/images/main.jpg');
-  background-image: url('/images/main.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
   position: relative;
-
-  @include mobile {
-    height: 495px;
-  }
-
-  .container {
-    height: 100%;
-  }
-
-  &__wrapper {
-    width: 100%;
-    height: 100%;
-    justify-content: end;
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 96px 0;
-  }
-  &__info {
-    max-width: 678px;
-    position: relative;
-    z-index: 2;
-    text-align: left;
-  }
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  color: $white-color;
+  background: linear-gradient(33deg, #132e57 21.82%, #255bac 100%);
+  clip-path: path(
+    "M-203 -138H1570C1570 -138 1570 171.3 1570 358.679C1570 541.561 1029.7 636 683.5 636C337.3 636 -203 541.561 -203 358.679C-203 175.797 -203 -138 -203 -138Z"
+  );
 
   &__title {
-    margin: 0 0 40px 0;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    margin: 144px 0 32px;
   }
   &__desc {
-    font: normal 400 16px / 150% 'Montserrat', sans-serif;
-    color: $white-color;
-    opacity: 0.79;
-    margin: 0 0 40px 0;
-  }
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    transform: rotate(180deg);
-    background: linear-gradient(180deg, #131313 0%, rgba(19, 19, 19, 0) 100%);
-    z-index: 1;
+    font-size: 18px;
   }
 }
